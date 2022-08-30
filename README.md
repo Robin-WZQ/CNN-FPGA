@@ -12,9 +12,9 @@
 
 ### 技术路线
 
-
-![image-20220828123126060](https://user-images.githubusercontent.com/60317828/187475975-771a466a-e42e-464e-8ef7-7f03745fd790.png)
-
+<div align=center>
+    <img src=https://user-images.githubusercontent.com/60317828/187475975-771a466a-e42e-464e-8ef7-7f03745fd790.png width="700"/>
+</div>
 
 如上图所示，我们的技术路线从工作内容来说，一共分为五部分：需求定义、数据准备、模型构建、verilog编写、工程部署。
 
@@ -28,12 +28,15 @@
 
 下图展示了我们模型的结构，针对cifar-10数据集中的输入，进行多轮操作，得到最终的分类结果。
 
-![image-20220829200000259](https://user-images.githubusercontent.com/60317828/187476004-4fc27f67-61ef-4a90-86e9-6f2627ca7e23.png)
-
+<div align=center>
+    <img src=https://user-images.githubusercontent.com/60317828/187476004-4fc27f67-61ef-4a90-86e9-6f2627ca7e23.png width="700"/>
+</div>
 
 更具体的参数设置如下所示（激活函数使用ReLu）：
 
-![image-20220829200951333](https://user-images.githubusercontent.com/60317828/187476137-4e30b148-1d4f-4205-8b35-a4103920db5c.png)
+<div align=center>
+    <img src=https://user-images.githubusercontent.com/60317828/187476137-4e30b148-1d4f-4205-8b35-a4103920db5c.png width="700"/>
+</div>
 
 ### 识别结果
 
