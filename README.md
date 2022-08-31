@@ -195,6 +195,34 @@
 | input_fc  | input  | 精度转换模块的输入，数据用半精度浮点数表示 | DATA_WIDTH_1 × NODES |
 | output_fc | output | 精度转换模块的输出，数据用单精度浮点数表示 | DATA_WIDTH_2 × NODES |
 
+### LeNet
+
+**说明：**
+
+  整个网络模块，包含两层卷积和三层全连接，对应源码中的Lenet.v.
+
+**可配置参数：**
+
+|     名称     |       说明       | 默认值 |
+| :----------: | :--------------: | :----: |
+| DATA_WIDTH_1 |  卷积层数据位宽  |   16   |
+| DATA_WIDTH_2 | 全连接层数据位宽 |   32   |
+|    ImgInW    |  输入图像的宽度  |   32   |
+|    ImgInH    |  输入图像的高度  |   32   |
+|    Kernel    |   卷积核的大小   |   5    |
+|   MvgP2out   |   最大池化输出   |   5    |
+|   DepthC1    | 第一层卷积核数量 |   6    |
+|   DepthC2    | 第二层卷积核数量 |   16   |
+
+**输入输出：**
+
+|    名称     |  类型  |                             说明                             |                        长度                        |
+| :---------: | :----: | :----------------------------------------------------------: | :------------------------------------------------: |
+|  CNNinput   | input  | 输入的图像，数据从左上至右下排列，每一个像素值用半精度浮点数表示 |           ImgInW × ImgInH × DATA_WIDTH_1           |
+|   Conv1F    | input  | 第一层卷积核权值，从第一个卷积核左上开始，到最后一个卷积核右下，每一个值用半精度浮点数表示 |      Kernel × Kernel × DepthC1× DATA_WIDTH_1       |
+|   Conv2F    | input  | 第二层卷积核权值，从第一个卷积核左上开始，到最后一个卷积核右下，每一个值用半精度浮点数表示 | DepthC2 × Kernel × Kernel × DepthC1 × DATA_WIDTH_1 |
+| LeNetoutput | output |                         输出的特征图                         |                         3                          |
+
 ------
 
 ## Requirements - 必要条件
@@ -216,23 +244,68 @@ git clone https://github.com/Robin-WZQ/CNN-FPGA.git
 
 2. 训练模型
 
+> 已提供训练好的模型。
+
  ```
-cd ./cifar-source
+cd ./cifar_source_torch
 python main.py
  ```
 
 3. 量化并保存
 
+> 如果用自己训练好的模型，就将pt文件移动到quantification文件夹下。
+
  ```
-python quantification_img.py
+# 权重量化
 python quantification_para.py
+# 输入图像量化
+python quantification_img.py
  ```
 
 4. 运行仿真
 
- ```
-在 vivado 里，运行LeNet_tb的simulation，即可得到结果。
- ```
+打开CNN-FPGA-Vivado，在 vivado 里，运行LeNet_tb的simulation，即可得到结果。
 
 ## Code Tree - 文件代码树
 
+> 文件及对应说明如下所示
+
+|cifar_source_torch
+
+----|distill.py # 
+
+----|distilled_lenet5_best.pt # 
+
+----|main.py # 
+
+----|models.py # 
+
+----|save_params.py # 
+
+----|test.py # 
+
+|CNN-FPGA-Vivado
+
+|quantification
+
+----|cifar-10-python # 
+
+----|distilled_lenet5_best.pt # 
+
+----|input_pic2_label8.txt # 
+
+----|quantification_img.py # 
+
+----|quantification_para.py # 
+
+|weight
+
+----|classifier.txt # 
+
+----|fc1.txt # 
+
+----|fc2.txt # 
+
+----|layer1.txt # 
+
+----|layer2.txt # 
