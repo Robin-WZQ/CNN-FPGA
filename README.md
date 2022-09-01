@@ -320,5 +320,5 @@ python quantification_img.py
 ----|layer2.txt # 
 
 
-## LICIENCE
+## LICENSE
 MIT
