@@ -252,6 +252,8 @@ python main.py
 3. 量化并保存
 
 > 如果用自己训练好的模型，就将pt文件移动到quantification文件夹下。
+> 
+> 修改ANNfull.v和Lenet_tb.v中的权重路径，我们提供了我们模型训练好的权重文件，详见weight文件夹中。
 
  ```
 # 权重量化
