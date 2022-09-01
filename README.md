@@ -266,6 +266,11 @@ python quantification_img.py
 
 打开CNN-FPGA-Vivado，在 vivado 里，运行LeNet_tb的simulation，即可得到结果。
 
+<div align=center>
+    <img src=https://user-images.githubusercontent.com/60317828/187814157-ae331356-7ceb-488f-9a1f-33e08efd7c8d.png width="700"/>
+</div>
+
+
 ## Code Tree - 文件代码树
 
 > 文件及对应说明如下所示
