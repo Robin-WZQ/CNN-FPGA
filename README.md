@@ -281,6 +281,8 @@ python quantification_img.py
 
 |cifar_source_torch
 
+----|distill.py # 蒸馏代码
+
 ----|distilled_lenet5_best.pt # 训练好的模型
 
 ----|main.py # 主函数
