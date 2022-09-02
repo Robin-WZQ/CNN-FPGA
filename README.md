@@ -281,43 +281,41 @@ python quantification_img.py
 
 |cifar_source_torch
 
-----|distill.py # 
+----|distilled_lenet5_best.pt # 训练好的模型
 
-----|distilled_lenet5_best.pt # 
+----|main.py # 主函数
 
-----|main.py # 
+----|models.py # 模型结构代码
 
-----|models.py # 
+----|save_params.py # 保存参数
 
-----|save_params.py # 
+----|test.py # 测试代码
 
-----|test.py # 
-
-|CNN-FPGA-Vivado
+|CNN-FPGA-Vivado # 包含testbench和源码，以及整个工程文件
 
 |quantification
 
-----|cifar-10-python # 
+----|cifar-10-python # 数据集
 
-----|distilled_lenet5_best.pt # 
+----|distilled_lenet5_best.pt # 训练好的模型 
 
-----|input_pic2_label8.txt # 
+----|input_pic2_label8.txt # 数据转换例子
 
-----|quantification_img.py # 
+----|quantification_img.py # 输入图像量化代码
 
-----|quantification_para.py # 
+----|quantification_para.py # 模型权重量化代码
 
 |weight
 
-----|classifier.txt # 
+----|classifier.txt # 全连接第3层权重
 
-----|fc1.txt # 
+----|fc1.txt # 全连接第1层权重
 
-----|fc2.txt # 
+----|fc2.txt # 全连接第2层权重
 
-----|layer1.txt # 
+----|layer1.txt # 卷积第1层权重
 
-----|layer2.txt # 
+----|layer2.txt # 卷积第2层权重
 
 
 ## LICENSE
