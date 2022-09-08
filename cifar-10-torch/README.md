@@ -2,7 +2,7 @@
 
 **cifar-source：**源代码文件夹
 
-- cifar-10-python：数据集文件夹
+- cifar-10-python：数据集文件夹，下载链接：https://www.cs.toronto.edu/~kriz/cifar.html
 - res：模型存储文件夹
   - distilled_lenet5_best.pt：蒸馏得到的Lenet5模型参数文件
 - train.py：Teacher model训练代码
