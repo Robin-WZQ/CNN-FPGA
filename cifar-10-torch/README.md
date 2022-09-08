@@ -24,7 +24,7 @@ numpy==1.20.3
 
 # 代码说明
 
-![code](https://github.com/Robin-WZQ/CNN-FPGA/edit/main/cifar-10-torch\figures\code.png)
+![code](https://github.com/Robin-WZQ/CNN-FPGA/blob/main/cifar-10-torch/figures/code.png)
 
 # 运行说明
 
