@@ -23,8 +23,9 @@ torchvision==0.10.0+cu111
 numpy==1.20.3
 
 # 代码说明
-
-![code](https://github.com/Robin-WZQ/CNN-FPGA/blob/main/cifar-10-torch/figures/code.png)
+<div align=center>
+    <img src=https://github.com/Robin-WZQ/CNN-FPGA/blob/main/cifar-10-torch/figures/code.png width="500"/>
+</div>
 
 # 运行说明
 
