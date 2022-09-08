@@ -4,9 +4,8 @@
 
 - 打开项目
 
-```
 打开CNN-FPGA-Vivado.xpr
-```
+
 - 修改路径
 
 1. leNet_TB.v
