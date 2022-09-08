@@ -5,7 +5,6 @@ from torchvision.models import resnet152
 from torchvision.datasets import CIFAR10
 from torchvision.transforms import transforms
 import torch.nn as nn
-from dataprocess import preprocess, CIFAR_Dataset
 
 device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
 
