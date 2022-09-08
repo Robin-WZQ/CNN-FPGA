@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
 import numpy as np
-from dataprocess import preprocess, preprocess2, CIFAR_Dataset
 from torch.utils.data import DataLoader
 from models import Lenet5, NormalCNN
 from torchvision import transforms
