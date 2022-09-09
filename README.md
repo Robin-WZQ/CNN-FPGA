@@ -281,17 +281,27 @@ python quantification_img.py
 
 |cifar_source_torch
 
-----|distill.py # 蒸馏代码
+----|cifar-source # 源代码文件夹
 
-----|distilled_lenet5_best.pt # 训练好的模型
+--------|cifar-10-python # 数据集文件夹
 
-----|main.py # 主函数
+--------|res # 模型存储文件夹
 
-----|models.py # 模型结构代码
+--------|distilled_lenet5_best.pt # 蒸馏得到的Lenet5模型参数文件
 
-----|save_params.py # 保存参数
+--------|train.py # Teacher model训练代码
 
-----|test.py # 测试代码
+--------|distill.py # 模型蒸馏训练代码
+
+--------|models.py # 模型结构代码
+
+--------|save_params.py # 参数导出代码
+
+--------|test.py # 测试代码
+
+--------|Lenet5_parameters_cifar.txt # 导出模型参数文件
+
+----|README.md # 说明文件
 
 |CNN-FPGA-Vivado # 包含testbench和源码，以及整个工程文件
 
