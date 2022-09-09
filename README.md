@@ -248,7 +248,9 @@ git clone https://github.com/Robin-WZQ/CNN-FPGA.git
 
  ```
 cd ./cifar_source_torch
-python main.py
+python train.py
+python distill.py
+python save_params.py
  ```
 
 3. 量化并保存
@@ -304,6 +306,14 @@ python quantification_img.py
 ----|README.md # 说明文件
 
 |CNN-FPGA-Vivado # 包含testbench和源码，以及整个工程文件
+
+----|CNN-FPGA-Vivado.src # 项目源码
+
+--------|sim_1/new # testbench源码
+
+--------|sources_1/new # 工程源码
+
+--------|CNN-FPGA-Vivado.xpr # 项目工程
 
 |quantification
 
